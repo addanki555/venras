@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VENRAS</title>
+  <meta name="description" content="VENRAS — Trust Us. It’s Done." />
+  <meta property="og:title" content="VENRAS" />
+  <meta property="og:description" content="Trust Us. It’s Done." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9da7b1; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; display: grid; place-items: center; padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1000px 600px at 50% -10%, rgba(79,70,229,0.15), transparent), var(--bg);
+      color: var(--fg);
+    }
+    .card { max-width:720px; width:100%; text-align:center; padding:36px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .logo { font-weight:800; letter-spacing:.08em; font-size:clamp(28px,6vw,48px); margin:0 0 8px; }
+    .tagline { font-size:clamp(14px,2.5vw,18px); color:var(--muted); margin:0 0 24px; }
+    .cta { display:inline-block; padding:12px 18px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
+      background: rgba(79,70,229,.15); text-decoration:none; color:var(--fg); font-weight:600; }
+    .footer { margin-top:24px; font-size:12px; color:var(--muted); opacity:.9; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1 class="logo">VENRAS</h1>
+    <p class="tagline">Trust Us. It’s Done.</p>
+    <a class="cta" href="mailto:hello@venras.com">Contact</a>
+    <div class="footer">© <span id="year"></span> VENRAS. All rights reserved.</div>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
